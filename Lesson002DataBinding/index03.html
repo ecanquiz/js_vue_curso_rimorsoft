@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Vue.js V2 V-BIND | Rimorsoft On line</title>
+    </head>
+    <body>
+        <div id="main">
+            <input type="text" v-model="info">
+            <p v-bind:title="info">Texto de relleno... {{ info }}</p>
+        </div>
+
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        </script>
+
+        <script>
+            new Vue({
+                el: "#main",
+                data: {
+                    info: ''
+                }
+            });
+        </script>
+    </body>
+</html>

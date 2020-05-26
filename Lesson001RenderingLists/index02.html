@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Vue.js V2 Listas | Rimorsoft On line</title>
+    </head>
+    <body>
+        <div id="main">
+            <ul>
+                <li v-for="item in people" v-text="item"></li>
+            </ul>
+            <input type="text" v-model="name" v-on:keyup.enter="addName">
+        </div>
+
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        </script>
+
+        <script>
+            new Vue({
+                el: "#main",
+                data: {
+                    people: ['Lynda','Isabella','Diana','Luisa'],
+                    name: '',
+                },
+
+                methods: {
+                    addName: function () {
+                        this.people.push(this.name);
+                        this.name = '';
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
